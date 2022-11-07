@@ -1,0 +1,13 @@
+.social {
+	width: 112px;
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .social {
+        &_menu {
+            display: none;
+        }
+    }
+}

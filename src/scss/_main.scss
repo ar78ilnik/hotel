@@ -1,0 +1,23 @@
+.main {
+	&_menu {
+		display: none;
+	}
+	&_menu--open {
+		display: block;
+		padding-left: 15px;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		right: 0;
+		background-color: var(--white);
+		min-height: 100vh;
+	}
+}
+
+@media (min-width: 768px) {
+	.main {
+		&_menu {
+			display: block;
+		}
+	}
+}

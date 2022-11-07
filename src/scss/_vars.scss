@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Width */
+$containerMobile: 320;
+
+/* Colors */
+:root {
+    --black: #141312;
+    --text: #1A212F;
+    --orange: #FF7236;
+    --yellow: #FAC663;
+    --white: #FFFEFD;
+}

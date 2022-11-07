@@ -1,0 +1,76 @@
+.promo {
+	min-height: 457px;
+	background: url(../img/promo-mobile.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 50px;
+	&__city {
+		font-family: 'Lato-Regular', sans-serif;
+    	font-weight: 400;
+    	font-size: 12px;
+    	margin-bottom: 12px;
+	}
+	&__name {
+		font-family: 'Rubik-Bold', sans-serif;
+    	font-weight: 700;
+    	font-size: 44px;
+    	margin-bottom: 22px;
+	}
+	&__what {
+		font-family: 'Lato-Regular', sans-serif;
+    	font-weight: 400;
+    	font-size: 16px;
+    	margin-bottom: 40px;
+	}
+}
+
+@media (min-width: 768px) {
+	.promo {
+		min-height: 868px;
+		padding-top: 140px;
+		background: url(../img/promo-tablet.jpg);
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		background-size: cover;
+		&__city {
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+		&__name {
+    		font-size: 62px;
+    		margin-bottom: 25px;
+		}
+		&__what {
+    		font-size: 20px;
+    		margin-bottom: 40px;
+		}
+	}
+}
+
+@media (min-width: 1366px) {
+	.promo {
+		min-height: 504px;
+		background: url(../img/promo-desktop.jpg);
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: cover;
+		align-items: flex-start;
+		padding-left: 200px;
+		&__city {
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+		&__name {
+    		font-size: 62px;
+    		margin-bottom: 25px;
+		}
+		&__what {
+    		font-size: 20px;
+    		margin-bottom: 40px;
+		}
+	}
+}

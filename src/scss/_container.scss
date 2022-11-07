@@ -1,0 +1,17 @@
+.container {
+	width: 90%;
+	height: inherit;
+	margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+	.container {
+		width: 88%;
+	}
+}
+
+@media (min-width: 1366px) {
+	.container {
+		width: 1266px;
+	}
+}

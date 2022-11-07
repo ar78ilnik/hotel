@@ -1,0 +1,52 @@
+.button {
+    &_menu {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+
+    &_menu--open {
+        display: block;
+    }
+    &_contacts {
+        font-family: 'Roboto-Bold', sans-serif;
+        font-size: 18px;
+        border: 0;
+        color: white;
+        background-color: var(--text-main);
+        padding: 20px 120px;
+        border-radius: 50px;
+    }
+    &_book {
+        width: 206px;
+        height: 50px;
+        font-family: 'Lato-Bold', sans-serif;
+        font-weight: 500;
+        border-radius: 25px;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        padding-left: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .button {
+        &_menu {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .button {
+        &_book {
+            cursor: pointer;
+        }
+    }
+}

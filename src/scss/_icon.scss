@@ -1,0 +1,21 @@
+.icon {
+	&_logo {
+		width: 46px;
+		height: 38px;
+	}
+	&_button {
+		stroke: var(--black);
+	}
+	&_menu,
+	.button_menu--open &_cross{
+		display: block;
+	}
+	&_cross,
+	.button_menu--open &_menu {
+		display: none;
+	}
+	&_book {
+		width: 36px;
+		height: 36px;
+	}
+}
