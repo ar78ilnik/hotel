@@ -1,3 +1,8 @@
 .wrapper {
 	height: inherit;
+	&_why {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
 }

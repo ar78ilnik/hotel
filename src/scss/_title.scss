@@ -1,0 +1,13 @@
+.title {
+	text-align: center;
+	&_h2 {
+		font-family: 'Rubik-Bold', sans-serif;
+		font-size: 28px;
+	}
+	&_h3 {
+		font-family: 'Rubik-Medium', sans-serif;
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 20px;
+	}
+}
