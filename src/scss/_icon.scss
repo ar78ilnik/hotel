@@ -1,26 +1,46 @@
 .icon {
-	&_logo {
-		width: 46px;
-		height: 38px;
-	}
-	&_button {
-		stroke: var(--black);
-	}
-	&_menu,
-	.button_menu--open &_cross{
-		display: block;
-	}
-	&_cross,
-	.button_menu--open &_menu {
-		display: none;
-	}
-	&_book {
-		width: 36px;
-		height: 36px;
-	}
-	&_why {
-		width: 60px;
-		height: 60px;
-		margin-bottom: 30px;
-	}
+    &_logo {
+        width: 46px;
+        height: 38px;
+    }
+
+    &_button {
+        stroke: var(--black);
+    }
+
+    &_menu,
+    .button_menu--open &_cross {
+        display: block;
+    }
+
+    &_cross,
+    .button_menu--open &_menu {
+        display: none;
+    }
+
+    &_book {
+        width: 36px;
+        height: 36px;
+    }
+
+    &_why {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .icon {
+        &_why {
+            width: 75px;
+            height: 75px;
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .icon {
+        &_why {}
+    }
 }

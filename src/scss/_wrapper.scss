@@ -1,8 +1,28 @@
 .wrapper {
-	height: inherit;
-	&_why {
-		display: flex;
-		flex-direction: column;
-		gap: 30px;
-	}
+    height: inherit;
+
+    &_why {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        background-color: var(--gray-bg);
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        &_why {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .wrapper {
+        &_why {}
+    }
 }

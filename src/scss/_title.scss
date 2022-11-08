@@ -1,13 +1,37 @@
 .title {
-	text-align: center;
-	&_h2 {
-		font-family: 'Rubik-Bold', sans-serif;
-		font-size: 28px;
-	}
-	&_h3 {
-		font-family: 'Rubik-Medium', sans-serif;
-		font-size: 18px;
-		font-weight: 600;
-		margin-bottom: 20px;
-	}
+    text-align: center;
+
+    &_h2 {
+        font-family: 'Rubik-Bold', sans-serif;
+        font-size: 28px;
+
+        &-why {
+            grid-column: 1/2;
+            grid-row: 1;
+        }
+    }
+
+    &_h3 {
+        font-family: 'Rubik-Medium', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+}
+
+@media (min-width: 768px) {
+    .title {
+        &_h3 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (min-width: 1366px) {
+    .title {
+        &_h3 {
+            font-size: 22px;
+        }
+    }
 }

@@ -1,7 +1,21 @@
 .text {
-	&_why {
-		font-family: 'Lato-Regular', sans-serif;
-		font-size: 15px;
-		line-height: 140%;
-	}
+    &_why {
+        font-family: 'Lato-Regular', sans-serif;
+        font-size: 15px;
+        line-height: 140%;
+    }
+}
+
+@media (min-width: 768px) {
+    .text {
+        &_why {}
+    }
+}
+
+@media (min-width: 1366px) {
+    .text {
+        &_why {
+            font-size: 16px;
+        }
+    }
 }
