@@ -2,6 +2,9 @@
     padding-top: 70px;
 
     &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         width: 290px;
         min-height: 289px;
         padding: 25px;

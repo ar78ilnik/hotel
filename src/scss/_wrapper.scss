@@ -1,5 +1,6 @@
 .wrapper {
     height: inherit;
+    margin-top: 40px;
 
     &_why {
         display: flex;
@@ -7,7 +8,6 @@
         align-items: center;
         gap: 30px;
         background-color: var(--gray-bg);
-        margin-top: 40px;
     }
 }
 
