@@ -1,0 +1,9 @@
+.rooms {
+    &_item {
+        overflow-x: scroll;
+        white-space: nowrap;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+}

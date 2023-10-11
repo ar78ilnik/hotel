@@ -16,15 +16,34 @@ img {
     height: auto;
 }
 
-/* Width */
-$containerMobile: 320;
+input[type="radio"] {
+    appearance: none;
+}
+
+/* Viewport Sizes*/
+
+/* Mobile viewport 375px */
+$mv: 375px;
+/* Tablet viewport 768px */
+$tv: 768px;
+/* PC viewport 1366px*/
+$pv: 1366px;
+
+/* Container Sizes */
+
+/* Mobile Container*/
+$mc: 88%;
+/* Tablet Container*/
+$tc: 91%;
+/* Pc Container*/
+$pc: 70%;
 
 /* Colors */
 :root {
-    --black: #141312;
-    --text: #1A212F;
-    --orange: #FF7236;
-    --yellow: #FAC663;
-    --white: #FFFEFD;
-    --gray-bg: #FFFDFB;
+    --black: rgba(20, 19, 18, 1);
+    --text: rgba(26, 33, 47, 1);
+    --orange: rgba(255, 114, 54, 1);
+    --yellow: rgba(250, 198, 99, 1);
+    --white: rgba(255, 254, 253, 1);
+    --gray-bg: rgba(255, 253, 251, 1);
 }

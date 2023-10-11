@@ -1,27 +1,37 @@
 .button {
-        width: 206px;
-        height: 50px;
-        font-family: 'Lato-Bold', sans-serif;
-        font-weight: 500;
-        border-radius: 25px;
-        border: none;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 10px;
-        padding-left: 30px;
     &_menu {
-        display: block;
-        margin: 0;
-        padding: 0;
-        border: none;
         background-color: transparent;
+        border: none;
     }
 
     &_menu--open {
         display: block;
     }
+
+    &_book,
+    &_orange {
+        font-family: 'Lato-Regular', sans-serif;
+        border: none;
+        border-radius: 50px;
+        font-size: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 206px;
+        height: 50px;
+        padding: 5px 10px 5px 25px;
+    }
+
+    &_book {
+        background-color: var(--white);
+        color: var(--text);
+    }
+
+    &_orange {
+        background-color: var(--orange);
+        color: var(--white);
+    }
+
     &_contacts {
         font-family: 'Roboto-Bold', sans-serif;
         font-size: 18px;
@@ -30,13 +40,6 @@
         background-color: var(--text-main);
         padding: 20px 120px;
         border-radius: 50px;
-    }
-    &_book {
-        color: var(--text);
-    }
-    &_orange {
-        color: var(--white);
-        background-color: var(--orange);
     }
 }
 

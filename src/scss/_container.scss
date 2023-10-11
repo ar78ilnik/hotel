@@ -1,17 +1,46 @@
 .container {
-	width: 90%;
-	height: inherit;
-	margin: 0 auto;
+
+    &_header {
+        width: $mc;
+        height: inherit;
+        margin: 0 auto;
+    }
+
+    &_main,
+    &_why {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    &_main {
+        gap: 3em;
+    }
+
+    &_why {
+        width: $mc;
+        margin: 0 auto;
+        gap: 2em;
+    }
+
+    &_rooms,
+    &_review {
+        width: $mc;
+        margin: 0 auto;
+    }
 }
 
-@media (min-width: 768px) {
-	.container {
-		width: 88%;
-	}
+@media (min-width: $tv) {
+    .container {
+        &_header {
+            width: $tc;
+        }
+    }
 }
 
-@media (min-width: 1366px) {
-	.container {
-		width: 1170px;
-	}
+@media (min-width: $pv) {
+    .container {
+        width: $pc;
+    }
 }
