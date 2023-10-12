@@ -2,6 +2,11 @@
     &__item {
         min-height: 230px;
 
+        &_review {
+            position: relative;
+            margin-bottom: 1em;
+        }
+
         &_review--open {
             font-family: 'Rubik-Medium', sans-serif;
             font-size: 30px;
@@ -16,8 +21,34 @@
         gap: 1em;
     }
 
-    &_review {
-        position: relative;
+    &__arrows {
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        margin-bottom: 1em;
+    }
+
+    &__prev,
+    &__next {
+        flex-grow: 1;
+    }
+
+    &__dots {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    &__dot {
+        width: 12px;
+        height: 12px;
+        background-color: var(--grey);
+        border-radius: 50%;
+
+        &_active {
+            background-color: var(--orange);
+        }
     }
 }
 

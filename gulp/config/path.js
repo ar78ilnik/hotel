@@ -1,4 +1,3 @@
-
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
 
@@ -17,7 +16,8 @@ export const path = {
     src: {
         js: `${srcFolder}/js/app.js`,
         images: `${srcFolder}/img/*.{jpg,jpeg,png,webp}`,
-        svg: `${srcFolder}/img/*.svg`,
+        svg: `${srcFolder}/img/**/*.svg`,
+        svgicons: `${srcFolder}/svgicons/*.svg`,
         scss: `${srcFolder}/scss/style.scss`,
         fonts: `${srcFolder}/fonts/*.woff2`,
         html: `${srcFolder}/*.html`,

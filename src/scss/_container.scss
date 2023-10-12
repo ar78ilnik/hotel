@@ -29,6 +29,29 @@
         width: $mc;
         margin: 0 auto;
     }
+
+    &_rooms {
+        display: flex;
+        overflow-x: auto;
+        min-width: 100%;
+    }
+
+    &_contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1em;
+    }
+
+    &_footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1em;
+        padding: 30px 15px;
+    }
 }
 
 @media (min-width: $tv) {

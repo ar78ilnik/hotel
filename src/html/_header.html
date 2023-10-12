@@ -2,47 +2,13 @@
     <div class="container container_header">
         <nav class="nav">
             <div class="logo">
-                <svg class="icon icon_logo">
-                    <use class="icon icon_menu" href="img/sprite.svg#logo"></use>
-                </svg>
+                <a href="index.html" class="link">
+                    <svg class="icon icon_logo">
+                        <use class="icon icon_menu" href="img/sprite.svg#logo"></use>
+                    </svg>
+                </a>
             </div>
-            <main class="main main_menu">
-                <ul class="list list_menu" id="list_menu">
-                    <li class="list__item">
-                        <a class="link link_menu" href="#">Почему мы?</a>
-                    </li>
-                    <li class="list__item">
-                        <a class="link link_menu" href="#">Номера</a>
-                    </li>
-                    <li class="list__item">
-                        <a class="link link_menu" href="#">Отзывы</a>
-                    </li>
-                    <li class="list__item">
-                        <a class="link link_menu" href="#">Контакты</a>
-                    </li>
-                </ul>
-                <a href="tel:8800333-55-99" class="link link_tel">8 (800) 333-55-99</a>
-                <section class="social social_menu">
-                    <a href="#" class="link link_social">
-                        Facebook
-                        <svg class="icon icon_logo" width="24" height="24">
-                            <use class="icon icon_social" href="img/sprite.svg#facebook"></use>
-                        </svg>
-                    </a>
-                    <a href="#" class="link link_social">
-                        Instagram
-                        <svg class="icon icon_logo" width="24" height="24">
-                            <use class="icon icon_social" href="img/sprite.svg#instagram"></use>
-                        </svg>
-                    </a>
-                    <a href="#" class="link link_social">
-                        VK
-                        <svg class="icon icon_logo" width="24" height="24">
-                            <use class="icon icon_social" href="img/sprite.svg#vk"></use>
-                        </svg>
-                    </a>
-                </section>
-            </main>
+            @@include('_menu.html')
             <button class="button button_menu" type="button" aria-controls="list_menu" aria-expanded="false">
                 <svg class="icon icon_button" width="40" height="40" viewBox="0 0 44 40">
                     <use class="icon icon_menu" href="img/sprite.svg#menu"></use>

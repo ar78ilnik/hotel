@@ -1,9 +1,11 @@
 export const slider = () => {
 
     let slideIndex = 1,
-        slides = document.querySelectorAll('.slider__item');
-
-    showSlides(slideIndex);
+        slides = document.querySelectorAll('.slider__item'),
+        prev = document.querySelector('.slider__prev'),
+        next = document.querySelector('.slider__next'),
+        sliderDots = document.querySelector('.slider__dots'),
+        sliderDot = document.querySelectorAll('.slider__dot');
 
     function showSlides(n) {
         if (n > slides.length) {
@@ -13,10 +15,10 @@ export const slider = () => {
             slideIndex = slides.length;
         }
         slides.forEach((item) => item.style.display = 'none');
-        dots.forEach((item) => item.classList.remove('dot-active'));
+        sliderDot.forEach((item) => item.classList.remove('slider__dot_active'));
 
         slides[slideIndex - 1].style.display = 'block';
-        dots[slideIndex - 1].classList.add('dot-active');
+        sliderDot[slideIndex - 1].classList.add('slider__dot_active');
     }
 
     function plusSlides(n) {
@@ -35,11 +37,13 @@ export const slider = () => {
         plusSlides(1);
     });
 
-    dotsWrap.addEventListener('click', function (evt) {
-        for (let i = 0; i < dots.length + 1; i++) {
+    sliderDots.addEventListener('click', function (evt) {
+        for (let i = 0; i < sliderDot.length + 1; i++) {
             if (evt.target.classList.contains('dot') && evt.target == dots[i - 1]) {
                 currentSlide(i);
             }
         }
     });
+
+    showSlides(slideIndex);
 }

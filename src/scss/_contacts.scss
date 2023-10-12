@@ -1,0 +1,17 @@
+.contacts {
+    background-color: var(--yellow);
+    color: var(--text);
+    padding: 40px 15px;
+
+    &__adres,
+    &__time,
+    &__telephone,
+    &__email,
+    &__social {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5em;
+    }
+
+}
