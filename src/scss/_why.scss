@@ -6,18 +6,18 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tv) {
     .why {
         &__item {
-            width: 324px;
+            flex-basis: 45%;
         }
     }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: $pv) {
     .why {
         &__item {
-            width: 370px;
+            flex-basis: 30%;
         }
     }
 }

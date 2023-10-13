@@ -28,5 +28,12 @@
         &_tel {
             display: none;
         }
+
+        &_menu {
+            display: flex;
+            height: inherit;
+            justify-content: center;
+            align-items: center;
+        }
     }
 }

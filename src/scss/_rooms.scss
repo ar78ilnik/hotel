@@ -1,7 +1,23 @@
 .rooms {
     &__item {
-        min-width: 290px;
+        flex-basis: 100%;
         margin-right: 5px;
         margin-bottom: 1em;
+    }
+}
+
+@media (min-width: $tv) {
+    .rooms {
+        &__item {
+            flex-basis: 400px;
+        }
+    }
+}
+
+@media (min-width: $pv) {
+    .rooms {
+        &__item {
+            flex-basis: 30%;
+        }
     }
 }

@@ -1,5 +1,5 @@
 .list {
-    &_menu {
+    &_menu-main {
         display: flex;
         flex-direction: column;
         gap: 25px;
@@ -9,8 +9,11 @@
 
     &_menu-footer {
         margin: 0;
+        display: flex;
+        justify-content: space-between;
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 1em;
     }
 
     &__item {
@@ -39,13 +42,26 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tv) {
     .list {
-        &_menu {
+
+        &_menu-main {
+            height: inherit;
             flex-direction: row;
+            margin: 0;
+            gap: 0;
+        }
+
+        &_menu-footer {
+            flex-wrap: nowrap;
         }
 
         &__item {
+            &-main {
+                height: inherit;
+                flex-grow: 1;
+            }
+
             &_rooms {
                 font-size: 13px;
                 margin-bottom: 13px;
