@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include("html/_head.html", {
+"title": "Catalog"
+})
+
+<body class="body">
+    @@include("html/_header.html")
+    <main class="main main_page">
+        <div class="container container_catalog">
+            <h1 class="title title_h1 title_h1--catalog">Наши номера</h1>
+            <div class="filters">
+                <svg class="icon icon_filter">
+                    <use class="icon" href="img/sprite.svg#filter"></use>
+                </svg>
+                Фильтры
+            </div>
+            <div class="super">
+                <select name="super" id="super">
+                    <option value="">по площади</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <div class="habitations">
+                @@include('html/_room.html')
+            </div>
+        </div>
+    </main>
+    @@include("html/_footer.html")
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

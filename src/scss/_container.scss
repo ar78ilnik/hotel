@@ -1,5 +1,11 @@
 .container {
 
+    &_catalog {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 40px 40px 1fr;
+    }
+
     &_header {
         width: $mc;
         height: inherit;
