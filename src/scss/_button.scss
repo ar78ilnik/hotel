@@ -30,6 +30,7 @@
     &_orange {
         background-color: var(--orange);
         color: var(--white);
+        align-self: center;
     }
 
     &_contacts {
@@ -40,6 +41,24 @@
         background-color: var(--text-main);
         padding: 20px 120px;
         border-radius: 50px;
+    }
+
+    &_submit,
+    &_reset {
+        color: var(--text);
+        border: 2px solid var(--yellow);
+        width: 240px;
+        height: 42px;
+        border-radius: 25px;
+        align-self: center;
+    }
+
+    &_submit {
+        background-color: var(--yellow);
+    }
+
+    &_reset {
+        background-color: var(--white);
     }
 }
 

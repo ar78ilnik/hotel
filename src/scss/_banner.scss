@@ -1,0 +1,72 @@
+.banner {
+	grid-column: 1/3;
+	grid-row: 4/5;
+	min-height: 496px;
+	background-image: url(../img/offer-mobile.webp);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: cover;
+	padding-top: 50px;
+	border-radius: 8px;
+	margin-bottom: 4em;
+
+	&__promo {
+		font-family: 'Rubik-Bold', sans-serif;
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin-bottom: 12px;
+	}
+
+	&__free {
+		font-family: 'Rubik-Bold', sans-serif;
+		font-size: 2.3rem;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+
+	&__action {
+		font-family: 'Lato-Regular', sans-serif;
+    	font-weight: 400;
+    	text-align: center;
+    	margin-bottom: 30px;
+	}
+}
+
+@media (min-width: $tv) {
+	.banner {
+		width: 678px;
+		grid-column: 1/5;
+		grid-row: 4/5;
+		justify-self: center;
+		background-image: url(../img/offer-tablet.webp);
+	}
+}
+
+@media (min-width: $pv) {
+	.banner {
+		width: 100%;
+		min-height: 380px;
+		background-image: url(../img/offer-desktop.webp);
+		padding-top: 70px;
+		padding-left: 220px;
+
+		&__promo {
+			font-size: 2.2rem;
+			font-weight: 700;
+			margin-bottom: 12px;
+		}
+
+		&__free {
+			font-size: 3.5rem;
+			font-weight: 700;
+			margin-bottom: 20px;
+		}
+
+		&__action {
+    		font-weight: 400;
+    		text-align: center;
+    		margin-bottom: 30px;
+    		text-align: left;
+		}
+	}
+}

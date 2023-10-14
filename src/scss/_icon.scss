@@ -32,6 +32,11 @@
         height: 60px;
     }
 
+    &_close {
+        width: 28px;
+        height: 28px;
+    }
+
     &_arrow {
         width: 100%;
     }
@@ -39,6 +44,11 @@
     &_filter {
         width: 12px;
         height: 15px;
+    }
+
+    &_room {
+        width: 18px;
+        height: 18px;
     }
 }
 

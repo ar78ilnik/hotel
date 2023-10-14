@@ -1,9 +1,15 @@
 .container {
 
+    &_rooms,
+    &_review {
+        width: $mc;
+        margin: 0 auto;
+    }
+
     &_catalog {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 40px 40px 1fr;
+        grid-template-rows: 40px 40px 1fr repeat(2, min-content);
     }
 
     &_header {
@@ -33,16 +39,26 @@
         gap: 2em;
     }
 
-    &_rooms,
-    &_review {
-        width: $mc;
-        margin: 0 auto;
-    }
-
     &_rooms {
         display: flex;
         overflow-x: auto;
         min-width: 100%;
+        gap: 5px;
+    }
+
+    &_banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &_popup {
+        width: 290px;
+        height: 825px;
+        margin: 0 auto;
+        background-color: var(--white-popup);
+        padding-left: 20px;
     }
 
     &_footer {
@@ -61,10 +77,21 @@
             width: $tc;
         }
 
+        &_catalog {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 40px 1fr repeat(2, min-content);
+        }
+
         &_why {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
+        }
+
+        &_habitations {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         &_contacts {
@@ -92,6 +119,14 @@
             margin: 0 auto;
         }
 
+        &_catalog {
+            width: 1166px;
+            margin: 0 auto;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, min-content);
+            gap: 1em;
+        }
+
         &_rooms {
             overflow-x: visible;
             min-width: auto;
@@ -101,6 +136,11 @@
 
         &_review {
             width: 50%;
+        }
+
+        &_banner {
+            width: 370px;
+            align-items: flex-start;
         }
     }
 }

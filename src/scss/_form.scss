@@ -1,0 +1,52 @@
+.form {
+	font-family: 'Lato-Regular', sans-serif;
+
+	&__title {
+		font-size: 1.1rem;
+		margin-bottom: 20px;
+	}
+
+	&__check {
+		margin-bottom: 1em;
+	}
+
+	&__numbers {
+		width: 214px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__input {
+		&_numbers {
+			width: 100px;
+			height: 36px;
+			padding-left: 5px;
+		}
+		&_check {
+			position: absolute;
+			z-index: -1;
+			opacity: 0;
+		}
+		&_check+label {
+			display: inline-flex;
+			align-items: center;
+			user-select: none;
+		}
+		&_check+label::before {
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			content: '';
+			flex-shrink: 0;
+			flex-grow: 0;
+			border: 1px solid var(--grey);
+			margin-right: 10px;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: 80% 80%;
+		}
+		&_check:checked+label::before {
+			background-image: url('data:image/svg+xml,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 3.25L4.84615 7L11 1" stroke="%23141312" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+		}
+	}
+}

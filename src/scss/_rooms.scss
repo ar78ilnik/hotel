@@ -3,6 +3,11 @@
         flex-basis: 100%;
         margin-right: 5px;
         margin-bottom: 1em;
+        border: 1px solid var(--grey);
+        border-radius: 6px;
+        &_catalog {
+            margin-right: 0;
+        }
     }
 }
 
@@ -10,6 +15,9 @@
     .rooms {
         &__item {
             flex-basis: 400px;
+            &_catalog {
+                flex-basis: 48%;
+            }
         }
     }
 }

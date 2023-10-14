@@ -1,0 +1,74 @@
+<div class="popup">
+	<div class="container container_popup">
+		<div class="popup_open__close">
+			<svg class="icon icon_close">
+				<use xlink:href="img/sprite.svg#close"></use>
+			</svg>
+		</div>
+		<form class="form popup_open__form" action="script.php">
+			<fieldset class="form__item">
+				<legend class="form__title">Цена за сутки</legend>
+				<div class="form__numbers">
+					<input class="form__input form__input_numbers" type="text" placeholder="от 100">
+					<input class="form__input form__input_numbers" type="text" placeholder="до 600">
+				</div>
+			</fieldset>
+			<fieldset class="form__item">
+				<legend class="form__title">Площадь</legend>
+				<div class="popup__checkbox">
+					<p class="form__check">
+						<input class="form__input form__input_check" type="checkbox" id="63" name="63"/>
+						<label for="63">0,63 m2</label>
+					</p>
+					<p class="form__check">
+						<input class="form__input form__input_check" type="checkbox" id="90" name="90"/>
+						<label for="90">0,90 m2</label>
+					</p>
+					<p class="form__check">
+						<input class="form__input form__input_check" type="checkbox" id="113" name="113"/>
+						<label for="113">1,13 m2</label>
+					</p>
+					<p class="form__check">
+						<input class="form__input form__input_check" type="checkbox" id="156" name="156"/>
+						<label for="156">1,56 m2</label>
+					</p>
+					<p class="form__check">
+						<input class="form__input form__input_check" type="checkbox" id="256" name="256"/>
+						<label for="256">2,56 m2</label>
+					</p>
+					<p class="form__check">
+						<input class="form__input form__input_check" type="checkbox" id="288" name="288"/>
+						<label for="288">2,88 m2</label>
+					</p>
+				</div>
+			</fieldset>
+			<fieldset class="form__item">
+				<legend class="form__title">Оснащение номера</legend>
+				<div class="popup__checkbox">
+					<p class="form__check">
+						<input class="form__input form__input_check" type="checkbox" id="empty" name="empty"/>
+						<label for="empty">Пустой номер</label>
+					</p>
+					<p class="form__check">
+						<input class="form__input form__input_check" type="checkbox" id="bath" name="bath"/>
+						<label for="bath">Лежак</label>
+					</p>
+					<p class="form__check">
+						<input class="form__input form__input_check" type="checkbox" id="afilator" name="afilator"/>
+						<label for="afilator">Когтеточка</label>
+					</p>
+					<p class="form__check">
+						<input class="form__input form__input_check" type="checkbox" id="games" name="games"/>
+						<label for="games">Игровой комплекс</label>
+					</p>
+					<p class="form__check">
+						<input class="form__input form__input_check" type="checkbox" id="house" name="house"/>
+						<label for="house">Домик</label>
+					</p>
+				</div>
+			</fieldset>
+			<input class="button button_submit" type="submit" value="Подобрать">
+			<input class="button button_reset" type="reset" value="Сбросить фильтр">
+		</form>
+	</div>
+</div>

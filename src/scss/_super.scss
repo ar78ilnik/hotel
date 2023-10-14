@@ -1,4 +1,18 @@
 .super {
     grid-column: 2/3;
     grid-row: 2/3;
+    &__select {
+        height: 30px;
+        border: none;
+        background-color: var(--white);
+        border-radius: 25px;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: $tv) {
+    .super {
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
 }

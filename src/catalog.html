@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include("html/_head.html", {
-"title": "Catalog"
-})
-
-<body class="body">
-    @@include("html/_header.html")
-    <main class="main main_page">
-        <div class="container container_catalog">
-            <h1 class="title title_h1 title_h1--catalog">Наши номера</h1>
-            <div class="filters">
-                <svg class="icon icon_filter">
-                    <use class="icon" href="img/sprite.svg#filter"></use>
-                </svg>
-                Фильтры
+    @@include("html/_head.html", {
+    "title": "Catalog"
+    })
+    <body class="body">
+        @@include("html/_header.html")
+        <main class="main main_page">
+            <div class="container container_catalog">
+                <h1 class="title title_h1 title_h1--catalog">Наши номера</h1>
+                <div class="filters">
+                    <svg class="icon icon_filter">
+                        <use class="icon" href="img/sprite.svg#filter"></use>
+                    </svg>
+                    Фильтры
+                </div>
+                @@include("html/_popup.html")
+                <div class="super">
+                    <select name="super" id="super" class="super__select">
+                        <option value="more" selected>По площади (больше)</option>
+                        <option value="less">По площади (меньше)</option>
+                        <option value="more">По цене (больше)</option>
+                        <option value="less">По цене (меньше)</option>
+                    </select>
+                </div>
+                <div class="habitations">
+                    @@include("html/_room.html")
+                </div>
+                @@include("html/_banner.html")
+                @@include("html/_contacts.html")
             </div>
-            <div class="super">
-                <select name="super" id="super">
-                    <option value="">по площади</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                </select>
-            </div>
-            <div class="habitations">
-                @@include('html/_room.html')
-            </div>
-        </div>
-    </main>
-    @@include("html/_footer.html")
-    <script src="js/app.min.js"></script>
-</body>
-
+        </main>
+        @@include("html/_footer.html")
+        <script>
+        const buttonFilters = document.querySelector('.filters'),
+        popup = document.querySelector('.popup'),
+        popupClose = document.querySelector('.popup_open__close');
+        buttonFilters.addEventListener('click', () => {
+        popup.classList.add('popup_open');
+        });
+        popupClose.addEventListener('click', () => {
+        popup.classList.remove('popup_open');
+        });
+        </script>
+        <script src="js/app.min.js"></script>
+    </body>
 </html>
