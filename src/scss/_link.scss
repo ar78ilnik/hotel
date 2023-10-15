@@ -21,6 +21,19 @@
     &_politics {
         color: var(--grey);
     }
+
+    &_more {
+        width: 220px;
+        height: 46px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--orange);
+        color: var(--white);
+        padding-right: 5px;
+        padding-left: 60px;
+        border-radius: 25px;
+    }
 }
 
 @media (min-width: 768px) {
