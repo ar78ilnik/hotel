@@ -1,7 +1,8 @@
 .container {
 
     &_rooms,
-    &_review {
+    &_review,
+    &_card {
         width: $mc;
         margin: 0 auto;
     }
@@ -114,6 +115,7 @@
         &_why,
         &_rooms,
         &_contacts,
+        &_card,
         &_footer {
             width: $pc;
             margin: 0 auto;

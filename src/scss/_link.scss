@@ -22,7 +22,8 @@
         color: var(--grey);
     }
 
-    &_more {
+    &_more,
+    &_card {
         width: 220px;
         height: 46px;
         display: flex;
@@ -33,6 +34,10 @@
         padding-right: 5px;
         padding-left: 60px;
         border-radius: 25px;
+    }
+
+    &_card {
+        width: 250px;
     }
 }
 

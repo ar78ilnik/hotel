@@ -7,6 +7,10 @@ import {
 import {
     popup
 } from "./modules/popup.js";
+import {
+    cards
+} from "./modules/cards.js";
 menu();
-slider();
+//slider();
 popup();
+//cards();

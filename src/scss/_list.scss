@@ -16,7 +16,16 @@
         gap: 1em;
     }
 
+    &_rooms {
+        width: 100%;
+    }
+
     &__item {
+
+        &_card {
+            line-height: 2;
+        }
+
         &_rooms {
             font-family: 'Lato-Regular', sans-serif;
             font-size: 12px;
