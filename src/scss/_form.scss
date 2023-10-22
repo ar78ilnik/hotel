@@ -48,5 +48,59 @@
 		&_check:checked+label::before {
 			background-image: url('data:image/svg+xml,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 3.25L4.84615 7L11 1" stroke="%23141312" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 		}
+		&_text {
+			width: 100%;
+			line-height: 3;
+			border: 1px solid var(--grey);
+			border-radius: 25px;
+			padding-left: 1em;
+		}
+		&_date {
+			line-height: 3;
+			border: 1px solid var(--grey);
+			border-radius: 25px;
+			font-size: 0.7em;
+		}
+	}
+
+	&__item {
+		&_order {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: .5em;
+		}
+	}
+
+	&__dates {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, min-content);
+		width: 100%;
+		grid-row-gap: .5em;
+	}
+
+	&__paragraph {
+		grid-column: 1/2;
+		grid-row: 2/3;
+	}
+
+	&__paragraph:nth-child(2) {
+		grid-column: 2/3;
+		grid-row: 2/3;
+	}
+
+	&__arive {
+		font-family: 'Lato-Regular', sans-serif;
+		font-size: .8rem;
+		grid-column: 1/2;
+		grid-row: 1/2;
+	}
+
+	&__label {
+		font-family: 'Lato-Regular', sans-serif;
+		font-size: .8rem;
 	}
 }

@@ -33,14 +33,22 @@
 @media (min-width: $pv) {
 	.popup {
 		display: block;
-		width: 332px;
-		height: 825px;
-		grid-column: 1/2;
-		grid-row: 2/3;
 		&_open {
-			&__close {
-				display: none;
+			display: block;
+			width: 332px;
+			height: 825px;
+			grid-column: 1/2;
+			grid-row: 2/3;
+			&_open {
+				&__close {
+					display: none;
+				}
 			}
+		}
+		&_order--open {
+			display: block;
+			width: 100vw;
+			height: 10000px;
 		}
 	}
 }

@@ -8,13 +8,13 @@
         <main class="main main_page">
             <div class="container container_catalog">
                 <h1 class="title title_h1 title_h1--catalog">Наши номера</h1>
+                @@include("html/_popup.html")
                 <div class="filters">
                     <svg class="icon icon_filter">
                         <use class="icon" href="img/sprite.svg#filter"></use>
                     </svg>
                     Фильтры
                 </div>
-                @@include("html/_popup.html")
                 <div class="super">
                     <select name="super" id="super" class="super__select">
                         <option value="more" selected>По площади (больше)</option>
