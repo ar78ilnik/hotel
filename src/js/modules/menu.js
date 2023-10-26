@@ -1,4 +1,4 @@
-export const menu = () => {
+const menu = () => {
     const buttonMenu = document.querySelector('.button_menu'),
         menu = document.querySelector('.menu');
 
@@ -9,3 +9,5 @@ export const menu = () => {
         menu.classList.toggle('menu_open');
     });
 }
+
+export default menu;

@@ -54,12 +54,12 @@
         align-items: center;
     }
 
-    &_popup {
-        width: 290px;
+    &_popup,
+    &_order {
+        width: 340px;
         height: 825px;
         margin: 0 auto;
         background-color: var(--white-popup);
-        padding-left: 20px;
     }
 
     &_footer {

@@ -1,0 +1,31 @@
+.order {
+    display: none;
+}
+
+.order_open {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 10000px;
+    z-index: 10;
+    background-color: var(--white-popup);
+    backdrop-filter: blur(5px);
+    padding-top: 80px;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2em;
+    }
+
+    &__close {
+        width: 28px;
+        height: 28px;
+        margin-left: auto;
+    }
+}

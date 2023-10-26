@@ -1,5 +1,4 @@
-export const slider = () => {
-
+const slider = () => {
     let slideIndex = 1,
         slides = document.querySelectorAll('.slider__item'),
         prev = document.querySelector('.slider__prev'),
@@ -47,3 +46,5 @@ export const slider = () => {
 
     showSlides(slideIndex);
 }
+
+export default slider;
