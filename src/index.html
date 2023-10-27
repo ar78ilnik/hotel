@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 @@include("html/_head.html", {
 "title": "Main"
 })
@@ -11,7 +10,13 @@
         <div class="container container_main">
             @@include("html/_promo.html")
             @@include("html/_why.html")
-            @@include("html/_rooms.html")
+            <section class="rooms">
+                <h2 class="title title_h2">Номера</h2>
+                <div class="container container_rooms">
+                    @@include("html/_rooms-index.html")
+                </div>
+            </section>
+
             @@include("html/_review.html")
             @@include("html/_contacts.html")
         </div>
@@ -88,65 +93,3 @@
 
     </script>
 </body>
-
-</html>
-=======
-    @@include("html/_head.html", {
-    "title": "Main"
-    })
-    <body class="body">
-        @@include("html/_header.html")
-        <main class="main main_page">
-            <div class="container container_main">
-                @@include("html/_promo.html")
-                @@include("html/_why.html")
-                @@include("html/_rooms.html")
-                @@include("html/_review.html")
-                @@include("html/_contacts.html")
-            </div>
-        </main>
-        @@include("html/_footer.html")
-        <script src="js/app.min.js"></script>
-        <script>
-        let slideIndex = 1,
-        slides = document.querySelectorAll('.slider__item'),
-        prev = document.querySelector('.slider__prev'),
-        next = document.querySelector('.slider__next'),
-        sliderDots = document.querySelector('.slider__dots'),
-        sliderDot = document.querySelectorAll('.slider__dot');
-        function showSlides(n) {
-        if (n > slides.length) {
-        slideIndex = 1;
-        }
-        if (n < 1) {
-        slideIndex = slides.length;
-        }
-        slides.forEach((item) => item.style.display = 'none');
-        sliderDot.forEach((item) => item.classList.remove('slider__dot_active'));
-        slides[slideIndex - 1].style.display = 'block';
-        sliderDot[slideIndex - 1].classList.add('slider__dot_active');
-        }
-        function plusSlides(n) {
-        showSlides(slideIndex += n);
-        }
-        function currentSlide(n) {
-        showSlides(slideIndex = n);
-        }
-        prev.addEventListener('click', function () {
-        plusSlides(-1);
-        });
-        next.addEventListener('click', function () {
-        plusSlides(1);
-        });
-        sliderDots.addEventListener('click', function (evt) {
-        for (let i = 0; i < sliderDot.length + 1; i++) {
-        if (evt.target.classList.contains('dot') && evt.target == dots[i - 1]) {
-        currentSlide(i);
-        }
-        }
-        });
-        showSlides(slideIndex);
-        </script>
-    </body>
-</html>
->>>>>>> 563a7981d238798cf8c6591cc521ab61137417c0

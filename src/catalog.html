@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 @@include("html/_head.html", {
 "title": "Catalog"
 })
@@ -10,43 +9,13 @@
     <main class="main main_page">
         <div class="container container_catalog">
             <h1 class="title title_h1 title_h1--catalog">Наши номера</h1>
+            @@include("html/_popup.html")
             <div class="filters">
                 <svg class="icon icon_filter">
                     <use class="icon" href="img/sprite.svg#filter"></use>
                 </svg>
                 Фильтры
-=======
-    @@include("html/_head.html", {
-    "title": "Catalog"
-    })
-    <body class="body">
-        @@include("html/_header.html")
-        <main class="main main_page">
-            <div class="container container_catalog">
-                <h1 class="title title_h1 title_h1--catalog">Наши номера</h1>
-                @@include("html/_popup.html")
-                <div class="filters">
-                    <svg class="icon icon_filter">
-                        <use class="icon" href="img/sprite.svg#filter"></use>
-                    </svg>
-                    Фильтры
-                </div>
-                <div class="super">
-                    <select name="super" id="super" class="super__select">
-                        <option value="more" selected>По площади (больше)</option>
-                        <option value="less">По площади (меньше)</option>
-                        <option value="more">По цене (больше)</option>
-                        <option value="less">По цене (меньше)</option>
-                    </select>
-                </div>
-                <div class="habitations">
-                    @@include("html/_room.html")
-                </div>
-                @@include("html/_banner.html")
-                @@include("html/_contacts.html")
->>>>>>> 563a7981d238798cf8c6591cc521ab61137417c0
             </div>
-            @@include("html/_popup.html")
             <div class="super">
                 <select name="super" id="super" class="super__select">
                     <option value="more" selected>По площади (больше)</option>
@@ -56,7 +25,142 @@
                 </select>
             </div>
             <div class="habitations">
-                @@include("html/_room.html")
+                <div class="rooms__item rooms__item_catalog">
+                    <img class="slider__img" src="img/econom1.jpg" alt="">
+                    <div class="slider__info">
+                        <h3 class="title title_h3 title_h3-rooms">Эконом</h3>
+                        <ul class="list list_rooms">
+                            <li class="list__item list__item_rooms">Площадь - 0,63 м2</li>
+                            <li class="list__item list__item_rooms">Размеры (ШхГхВ) - 90х70х180 см</li>
+                            <li class="list__item list__item_rooms">
+                                Оснащение номера
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment1"></use>
+                                </svg>
+                            </li>
+                            <li class="list__item list__item_rooms">Цена за сутки: 100₽</li>
+                        </ul>
+                        @@include("html/_buttonSlider.html")
+                    </div>
+                </div>
+                <div class="rooms__item rooms__item_catalog">
+                    <img class="slider__img" src="img/econom2.jpg" alt="">
+                    <div class="slider__info">
+                        <h3 class="title title_h3 title_h3-rooms">Эконом плюс</h3>
+                        <ul class="list list_rooms">
+                            <li class="list__item list__item_rooms">Площадь - 0,90 м2</li>
+                            <li class="list__item list__item_rooms">Размеры (ШхГхВ) - 90х100х180 см</li>
+                            <li class="list__item list__item_rooms">
+                                Оснащение номера
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment2"></use>
+                                </svg>
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment3"></use>
+                                </svg>
+                            </li>
+                            <li class="list__item list__item_rooms">Цена за сутки: 200₽</li>
+                        </ul>
+                        @@include("html/_buttonSlider.html")
+                    </div>
+                </div>
+                <div class="rooms__item rooms__item_catalog">
+                    <img class="slider__img" src="img/econom1.jpg" alt="">
+                    <div class="slider__info">
+                        <h3 class="title title_h3">Комфорт</h3>
+                        <ul class="list list_rooms">
+                            <li class="list__item list__item_rooms">Площадь - 1,13 м2</li>
+                            <li class="list__item list__item_rooms">Размеры (ШхГхВ) - 100х125х180 см</li>
+                            <li class="list__item list__item_rooms">
+                                Оснащение номера
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment2"></use>
+                                </svg>
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment3"></use>
+                                </svg>
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment4"></use>
+                                </svg>
+                            </li>
+                            <li class="list__item list__item_rooms">Цена за сутки: 250₽</li>
+                        </ul>
+                        @@include("html/_buttonSlider.html")
+                    </div>
+                </div>
+                <div class="rooms__item rooms__item_catalog">
+                    <img class="slider__img" src="img/econom2.jpg" alt="">
+                    <div class="slider__info">
+                        <h3 class="title title_h3">Сьют</h3>
+                        <ul class="list list_rooms">
+                            <li class="list__item list__item_rooms">Площадь - 1,56 м2</li>
+                            <li class="list__item list__item_rooms">Размеры (ШхГхВ) — 125х125х180 см</li>
+                            <li class="list__item list__item_rooms">
+                                Оснащение номера
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment2"></use>
+                                </svg>
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment3"></use>
+                                </svg>
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment4"></use>
+                                </svg>
+                            </li>
+                            <li class="list__item list__item_rooms">Цена за сутки: 350₽</li>
+                        </ul>
+                        @@include("html/_buttonSlider.html")
+                    </div>
+                </div>
+                <div class="rooms__item rooms__item_catalog">
+                    <img class="slider__img" src="img/econom1.jpg" alt="">
+                    <div class="slider__info">
+                        <h3 class="title title_h3">Люкс</h3>
+                        <ul class="list list_rooms">
+                            <li class="list__item list__item_rooms">Площадь - 2,56 м2</li>
+                            <li class="list__item list__item_rooms">Размеры (ШхГхВ) — 160х160х180 см</li>
+                            <li class="list__item list__item_rooms">
+                                Оснащение номера
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment2"></use>
+                                </svg>
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment3"></use>
+                                </svg>
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment4"></use>
+                                </svg>
+                            </li>
+                            <li class="list__item list__item_rooms">Цена за сутки: 500₽</li>
+                        </ul>
+                        @@include("html/_buttonSlider.html")
+                    </div>
+                </div>
+                <div class="rooms__item rooms__item_catalog">
+                    <img class="slider__img" src="img/econom2.jpg" alt="">
+                    <div class="slider__info">
+                        <h3 class="title title_h3">Супер люкс</h3>
+                        <ul class="list list_rooms">
+                            <li class="list__item list__item_rooms">Площадь - 2,88 м2</li>
+                            <li class="list__item list__item_rooms">Размеры (ШхГхВ) — 180х160х180 см</li>
+                            <li class="list__item list__item_rooms">
+                                Оснащение номера
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment2"></use>
+                                </svg>
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment3"></use>
+                                </svg>
+                                <svg class="icon icon_room">
+                                    <use xlink:href="img/sprite.svg#equipment4"></use>
+                                </svg>
+                            </li>
+                            <li class="list__item list__item_rooms">Цена за сутки: 600₽</li>
+                        </ul>
+                        @@include("html/_buttonSlider.html")
+                    </div>
+                </div>
+
             </div>
             @@include("html/_banner.html")
             @@include("html/_contacts.html")
@@ -78,20 +182,22 @@
                 });
             }
 
-            function filtersBox() {
-                const buttonFilters = document.querySelector('.filters'),
-                    popup = document.querySelector('.popup'),
-                    popupClose = document.querySelector('.popup_open__close');
-                buttonFilters.addEventListener('click', () => {
-                    popup.classList.add('popup_open');
+            function popup(trigger, window, close) {
+
+                const buttonTrigger = document.querySelector(trigger),
+                    popup = document.querySelector(window),
+                    popupClose = document.querySelector(close);
+
+                buttonTrigger.addEventListener('click', () => {
+                    popup.classList.add('popup_catalog--open');
                 });
                 popupClose.addEventListener('click', () => {
-                    popup.classList.remove('popup_open');
+                    popup.classList.remove('popup_catalog--open');
                 });
             }
 
             menuButton('.button_menu', '.menu');
-            filtersBox();
+            popup('.filters', '.popup_catalog', '.popup--open__close');
         });
 
     </script>

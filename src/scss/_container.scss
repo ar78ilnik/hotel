@@ -2,7 +2,8 @@
 
     &_rooms,
     &_review,
-    &_card {
+    &_card,
+    &_why {
         width: $mc;
         margin: 0 auto;
     }
@@ -35,16 +36,13 @@
     }
 
     &_why {
-        width: $mc;
-        margin: 0 auto;
         gap: 2em;
     }
 
     &_rooms {
         display: flex;
-        overflow-x: auto;
-        min-width: 100%;
-        gap: 5px;
+        flex-direction: column;
+        row-gap: 1em;
     }
 
     &_banner {
@@ -74,6 +72,16 @@
 
 @media (min-width: $tv) {
     .container {
+
+        &_rooms,
+        &_review,
+        &_card,
+        &_why,
+        &_catalog {
+            width: $mc;
+            margin: 0 auto;
+        }
+
         &_header {
             width: $tc;
         }
@@ -87,6 +95,12 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
+        }
+
+        &_rooms {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         &_habitations {
@@ -127,13 +141,6 @@
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(3, min-content);
             gap: 1em;
-        }
-
-        &_rooms {
-            overflow-x: visible;
-            min-width: auto;
-            flex-wrap: wrap;
-            justify-content: space-between;
         }
 
         &_review {

@@ -62,15 +62,19 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tv) {
     .button {
         &_menu {
             display: none;
         }
+
+        &_orange {
+            align-self: flex-start;
+        }
     }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: $pv) {
     .button {
         &_book {
             cursor: pointer;

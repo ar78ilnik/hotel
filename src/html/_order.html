@@ -1,77 +1,29 @@
-<<<<<<< HEAD
-<div class="order">
-    <div class="container container_order">
-        <div class="order_open__close">
-            <svg class="icon icon_close">
-                <use xlink:href="img/sprite.svg#close"></use>
-            </svg>
+    <div class="popup popup_order">
+        <div class="container container_popup">
+            <div class="popup_open__close">
+                <svg class="icon icon_close">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
+            </div>
+            <form action="script.php" class="form popup_open__form">
+                <fieldset class="form__item form__item_order">
+                    <legend class="form__title">Забронировать номер</legend>
+                    <input class="form__input form__input_text" type="text" name="name" placeholder="Ваше имя">
+                    <input class="form__input form__input_text" type="text" name="name_pet" placeholder="Имя вашего питомца">
+                    <input class="form__input form__input_text" type="tel" name="phone" placeholder="Телеофн">
+                    <input class="form__input form__input_text" type="email" name="email" placeholder="E-mail">
+                    <div class="form__dates">
+                        <span class="form__arive">Дата заезда</span>
+                        <p class="form__paragraph">
+                            <label class="form__label" for="start">с</label>
+                            <input class="form__input form__input_date" id="start" type="date" value="2023-10-22">
+                        </p>
+                        <p class="form__paragraph">
+                            <label class="form__label" for="end">по</label>
+                            <input class="form__input form__input_date" id="end" type="date" value="2023-10-29">
+                        </p>
+                    </div>
+                </fieldset>
+                <button class="button button_submit" type="submit">Отправить заявку</button>
+            </form>
         </div>
-        <form class="form order_open__form" action="script.php">
-            <fieldset class="form__item">
-                <legend class="form__title">Забронировать номер</legend>
-                <div class="order__inputs">
-                    <input class="form__input form__input_order" type="text" name="name" placeholder="Ваше имя" />
-                    <input class="form__input form__input_order" type="text" name="pat-name" placeholder="Имя вашего питомца" />
-                    <input class="form__input form__input_order" type="tel" name="phone" placeholder="Телефон" />
-                    <input class="form__input form__input_order" type="email" name="email" placeholder="e-mail" />
-                </div>
-            </fieldset>
-            <input class="button button_submit" type="submit" value="Подобрать">
-        </form>
-    </div>
-</div>
-=======
-<div class="popup popup_order">
-	<div class="container container_popup">
-		<div class="popup_open__close">
-			<svg class="icon icon_close">
-				<use xlink:href="img/sprite.svg#close"></use>
-			</svg>
-		</div>
-		<form action="script.php" class="form popup_open__form">
-			<fieldset class="form__item form__item_order">
-				<legend class="form__title">Забронировать номер</legend>
-				<input class="form__input form__input_text" type="text" name="name" placeholder="Ваше имя">
-				<input class="form__input form__input_text" type="text" name="name_pet" placeholder="Имя вашего питомца">
-				<input class="form__input form__input_text" type="tel" name="phone" placeholder="Телеофн">
-				<input class="form__input form__input_text" type="email" name="email" placeholder="E-mail">
-				<div class="form__dates">
-					<span class="form__arive">Дата заезда</span>
-					<p class="form__paragraph">
-						<label class="form__label" for="start">с</label>
-						<input class="form__input form__input_date" id="start" type="date" value="2023-10-22">
-					</p>
-					<p class="form__paragraph">
-						<label class="form__label" for="end">по</label>
-						<input class="form__input form__input_date" id="end" type="date" value="2023-10-29">
-					</p>
-				</div>
-			</fieldset>
-			<button  class="button button_submit" type="submit">Отправить заявку</button>
-		</form>
-	</div>
-	<script>
-	window.addEventListener('DOMContentLoaded', function() {
-		'use strict';
-		const popup = document.querySelector('.popup_order'),
-				buttonOrange = document.querySelector('.button_orange'),
-				close = document.querySelector('.popup_open__close');
-				buttonOrange.addEventListener('click', () => {
-					popup.classList.add('popup_order--open');
-				});
-				close.addEventListener('click', function() {
-					popup.classList.remove('popup_order--open');
-				});
-		const buttonMenu = document.querySelector('.button_menu'),
-	menu = document.querySelector('.menu');
-	buttonMenu.addEventListener('click', () => {
-	let expanded = buttonMenu.getAttribute('aria-expanded') === 'true' || false;
-	buttonMenu.setAttribute('aria-expanded', !expanded);
-	buttonMenu.classList.toggle('button_menu--open');
-	menu.classList.toggle('menu_open');
-	});
-	});
-	</script>
-	<script src="js/app.min.js"></script>
-</div>
->>>>>>> 563a7981d238798cf8c6591cc521ab61137417c0

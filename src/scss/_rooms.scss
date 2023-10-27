@@ -1,10 +1,12 @@
 .rooms {
     &__item {
-        flex-basis: 100%;
-        margin-right: 5px;
-        margin-bottom: 1em;
         border: 1px solid var(--grey);
         border-radius: 6px;
+
+        &-index {
+            flex-basis: 100%;
+        }
+
         &_catalog {
             margin-right: 0;
         }
@@ -14,9 +16,13 @@
 @media (min-width: $tv) {
     .rooms {
         &__item {
-            flex-basis: 400px;
+
+            &_index {
+                flex-basis: 45%;
+            }
+
             &_catalog {
-                flex-basis: 48%;
+                flex-basis: 45%;
             }
         }
     }

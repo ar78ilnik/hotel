@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 @@include("html/_head.html", {
 "title": "Карточка номера"
 })
 
-<body class="body">
+<body class="body body_card">
     @@include("html/_header.html")
     <main class="main main_page">
-        @@include("html/_order.html")
         <div class="container container_card">
             <section class="card">
                 <div class="card__photos">
@@ -16,79 +14,22 @@
                         <img class="card__img_main card__img_main--active" src="img/card-tab1.jpg">
                         <img class="card__img_main" src="img/card-tab2.jpg">
                         <img class="card__img_main" src="img/card-tab3.jpg">
-=======
-    @@include("html/_head.html", {
-    "title": "Карточка номера"
-    })
-    <body class="body body_card">
-        @@include("html/_header.html")
-        <main class="main main_page">
-            @@include('html/_order.html')
-            <div class="container container_card">
-                <section class="card">
-                    <div class="card__photos">
-                        <div class="card__photos_main">
-                            <img class="card__img_main card__img_main--active" src="img/card-tab1.jpg">
-                            <img class="card__img_main" src="img/card-tab2.jpg">
-                            <img class="card__img_main" src="img/card-tab3.jpg">
-                        </div>
-                        <div class="card__photos-block">
-                            <picture>
-                                <source srcset="img/tab1-pc.jpg" media="(min-width: 1366px)">
-                                <img class="card__img" src="img/card-tab1.jpg" alt="">
-                            </picture>
-                            <picture>
-                                <source srcset="img/tab2-pc.jpg" media="(min-width: 1366px)">
-                                <img class="card__img" src="img/card-tab2.jpg" alt="">
-                            </picture>
-                            <picture>
-                                <source srcset="img/tab3-pc.jpg" media="(min-width: 1366px)">
-                                <img class="card__img" src="img/card-tab3.jpg" alt="">
-                            </picture>
-                        </div>
->>>>>>> 563a7981d238798cf8c6591cc521ab61137417c0
                     </div>
-                    <h1 class="title title_h1 title_h1--card">Супер-Люкс</h1>
-                    <div class="slider__info">
-                        <ul class="list list_rooms">
-                            <li class="list__item list__item_card">Площадь - 2,88 м2</li>
-                            <li class="list__item list__item_card">Размеры (ШхГхВ) - 180х160х180 см</li>
-                            <li class="list__item list__item_card">
-                                Оснащение номера
-                                <ul class="list">
-                                    <li class="list__item">
-                                        <svg class="icon icon_room">
-                                            <use xlink:href="img/sprite.svg#equipment2"></use>
-                                        </svg>
-                                        Лежак
-                                    </li>
-                                    <li class="list__item">
-                                        <svg class="icon icon_room">
-                                            <use xlink:href="img/sprite.svg#equipment5"></use>
-                                        </svg>
-                                        Домик
-                                    </li>
-                                    <li class="list__item">
-                                        <svg class="icon icon_room">
-                                            <use xlink:href="img/sprite.svg#equipment4"></use>
-                                        </svg>
-                                        Игровой комплекс - 3 яруса
-                                    </li>
-                                    <li class="list__item">
-                                        <svg class="icon icon_room">
-                                            <use xlink:href="img/sprite.svg#equipment3"></use>
-                                        </svg>
-                                        Когтеточка
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="list__item list__item_card">Цена за сутки: 600₽</li>
-                        </ul>
-                        @@include("html/_buttonOrderCard.html")
+                    <div class="card__photos-block">
+                        <picture>
+                            <source srcset="img/tab1-pc.jpg" media="(min-width: 1366px)">
+                            <img class="card__img" src="img/card-tab1.jpg" alt="">
+                        </picture>
+                        <picture>
+                            <source srcset="img/tab2-pc.jpg" media="(min-width: 1366px)">
+                            <img class="card__img" src="img/card-tab2.jpg" alt="">
+                        </picture>
+                        <picture>
+                            <source srcset="img/tab3-pc.jpg" media="(min-width: 1366px)">
+                            <img class="card__img" src="img/card-tab3.jpg" alt="">
+                        </picture>
                     </div>
-<<<<<<< HEAD
                 </div>
-                <h1 class="title title_h1 title_h1--card">Супер-Люкс</h1>
                 <div class="slider__info">
                     <ul class="list list_rooms">
                         <li class="list__item list__item_card">Площадь - 2,88 м2</li>
@@ -127,11 +68,11 @@
                     @@include("html/_buttonOrderCard.html")
                 </div>
             </section>
-            @@include("html/_contacts.html")
         </div>
+
+        @@include("html/_contacts.html")
     </main>
     @@include("html/_footer.html")
-
 </body>
 <script>
     window.addEventListener('DOMContentLoaded', function() {
@@ -179,59 +120,26 @@
             });
         }
 
+        function popup(trigger, window, close) {
+
+            const buttonTrigger = document.querySelector(trigger),
+                popup = document.querySelector(window),
+                popupClose = document.querySelector(close);
+
+            buttonTrigger.addEventListener('click', () => {
+                popup.classList.add(popup + '_open');
+            });
+            popupClose.addEventListener('click', () => {
+                popup.classList.remove(popup + '_open');
+            });
+        }
+
+
         menuButton('.button_menu', '.menu');
         tabPhotos('.card__img', '.card__img_main', '.card__photos-block');
+        popup('.popup_order', '.popup', '.popup_open__close');
     });
 
 </script>
 
 </html>
-=======
-                </section>
-                @@include("html/_contacts.html")
-            </div>
-        </main>
-        @@include("html/_footer.html")
-        <script>
-        window.addEventListener('DOMContentLoaded', function() {
-        'use strict';
-        const buttonMenu = document.querySelector('.button_menu'),
-        menu = document.querySelector('.menu');
-        buttonMenu.addEventListener('click', () => {
-        let expanded = buttonMenu.getAttribute('aria-expanded') === 'true' || false;
-        buttonMenu.setAttribute('aria-expanded', !expanded);
-        buttonMenu.classList.toggle('button_menu--open');
-        menu.classList.toggle('menu_open');
-        });
-        let photos = document.querySelector('.card__photos'),
-        tab = photos.querySelectorAll('.card__img'),
-        tabContent = photos.querySelectorAll('.card__img_main'),
-        mini = photos.querySelector('.card__photos-block');
-        function hideTabContent(a) {
-        for (let i = a; i < tabContent.length; i++) {
-        tabContent[i].classList.remove('card__img_main--active');
-        }
-        }
-        hideTabContent(1);
-        function showTabContent(b) {
-        if (tabContent[b].classList.contains('card__img_main')) {
-        tabContent[b].classList.add('card__img_main--active');
-        }
-        }
-        mini.addEventListener('click', function(evt) {
-        let target = evt.target;
-        if (target && target.classList.contains('card__img')) {
-        for (let i = 0; i < tab.length; i++) {
-        if (target == tab[i]) {
-        hideTabContent(0);
-        showTabContent(i);
-        break;
-        }
-        }
-        }
-        });
-        });
-        </script>
-    </body>
-</html>
->>>>>>> 563a7981d238798cf8c6591cc521ab61137417c0
