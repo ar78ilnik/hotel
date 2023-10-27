@@ -8,6 +8,7 @@
     @@include("html/_header.html")
     <main class="main main_page">
         <div class="container container_card">
+            @@include("html/_order.html")
             <section class="card">
                 <div class="card__photos">
                     <div class="card__photos_main">
@@ -69,7 +70,6 @@
                 </div>
             </section>
         </div>
-
         @@include("html/_contacts.html")
     </main>
     @@include("html/_footer.html")
@@ -120,24 +120,24 @@
             });
         }
 
-        function popup(trigger, window, close) {
+        function popup(trigger, popupWindow, close) {
 
             const buttonTrigger = document.querySelector(trigger),
-                popup = document.querySelector(window),
+                popup = document.querySelector(popupWindow),
                 popupClose = document.querySelector(close);
 
             buttonTrigger.addEventListener('click', () => {
-                popup.classList.add(popup + '_open');
+                popup.classList.add('popup_order--open');
             });
             popupClose.addEventListener('click', () => {
-                popup.classList.remove(popup + '_open');
+                popup.classList.remove('popup_order--open');
             });
         }
 
 
         menuButton('.button_menu', '.menu');
         tabPhotos('.card__img', '.card__img_main', '.card__photos-block');
-        popup('.popup_order', '.popup', '.popup_open__close');
+        popup('.button_orange', '.popup', '.popup_open__close');
     });
 
 </script>

@@ -182,10 +182,10 @@
                 });
             }
 
-            function popup(trigger, window, close) {
+            function popup(trigger, popupWindow, close) {
 
                 const buttonTrigger = document.querySelector(trigger),
-                    popup = document.querySelector(window),
+                    popup = document.querySelector(popupWindow),
                     popupClose = document.querySelector(close);
 
                 buttonTrigger.addEventListener('click', () => {
