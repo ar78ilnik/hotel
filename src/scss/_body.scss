@@ -17,3 +17,11 @@
         background-color: var(--background-gray);
     }
 }
+
+@media (min-width: $pv) {
+    .body {
+        &_card {
+            position: relative;
+        }
+    }
+}
