@@ -87,7 +87,7 @@
                 buttonMenu.classList.toggle('button_menu--open');
                 menu.classList.toggle('menu_open');
             });
-        }
+        };
 
         function tabPhotos(wrapper, mainPhotos, miniPhotos) {
             let tab = document.querySelectorAll(wrapper),
@@ -120,24 +120,99 @@
             });
         }
 
-        function popup(trigger, popupWindow, close) {
+        function popup(triggerSelector, popupSelector, closeSelector) {
 
-            const buttonTrigger = document.querySelector(trigger),
-                popup = document.querySelector(popupWindow),
-                popupClose = document.querySelector(close);
+            const trigger = document.querySelectorAll(triggerSelector),
+                popup = document.querySelector(popupSelector),
+                close = document.querySelector(closeSelector);
 
-            buttonTrigger.addEventListener('click', () => {
-                popup.classList.add('popup_order--open');
+            trigger.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (e.target) {
+                        e.preventDefault();
+                    }
+
+                    popup.style.display = 'block';
+                    document.body.style.overflow = "hidden";
+                });
             });
-            popupClose.addEventListener('click', () => {
-                popup.classList.remove('popup_order--open');
-            });
-        }
 
+            close.addEventListener('click', () => {
+                popup.style.display = 'none';
+                document.body.style.overflow = "";
+            });
+
+            popup.addEventListener('click', (e) => {
+                if (e.target === popup) {
+                    popup.classList.remove('popup_catalog--open');
+                    document.body.style.overflow = "";
+                }
+            });
+        };
+
+        function forms() {
+            const form = document.querySelectorAll('form'),
+                inputs = document.querySelectorAll('input'),
+                phoneInputs = document.querySelectorAll('input[type="tel"]');
+
+            phoneInputs.forEach(item => {
+                item.addEventListener('input', () => {
+                    console.log(item);
+                    item.value = item.value.replace(/\D/, '');
+                });
+            });
+
+            const message = {
+                loading: 'Load...',
+                succes: 'Thank you',
+                failure: 'Somethink is wrong'
+            };
+
+            const postData = async (url, data) => {
+                document.querySelector('.status').innerHTML = message.loading;
+                let res = await fetch(url, {
+                    method: "POST",
+                    body: data
+                });
+
+                return await res.text();
+            };
+
+            const clearInputs = () => {
+                inputs.forEach(item => {
+                    item.value = '';
+                });
+            };
+
+            form.forEach(item => {
+                item.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    let statusMessage = document.createElement('div');
+                    statusMessage.classList.add('status');
+                    item.appendChild(statusMessage);
+
+                    const formData = new FormData(item);
+
+                    postData('srever.php', formData).then(res => {
+                        statusMessage.textContent = message.succes;
+                    }).catch(() => {
+                        statusMessage.textContent = message.failure;
+                    }).finally(() => {
+                        clearInputs();
+                        setTimeout(() => {
+                            statusMessage.remove();
+                        }, 3000);
+                    });
+                });
+            });
+        };
 
         menuButton('.button_menu', '.menu');
         tabPhotos('.card__img', '.card__img_main', '.card__photos-block');
-        popup('.button_orange', '.popup', '.popup_open__close');
+        popup('.button_orange', '.popup_order', '.popup--open__close');
+        forms();
+
     });
 
 </script>

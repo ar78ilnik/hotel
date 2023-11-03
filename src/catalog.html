@@ -182,17 +182,33 @@
                 });
             }
 
-            function popup(trigger, popupWindow, close) {
+            function popup(triggerSelector, popupSelector, closeSelector) {
 
-                const buttonTrigger = document.querySelector(trigger),
-                    popup = document.querySelector(popupWindow),
-                    popupClose = document.querySelector(close);
+                const trigger = document.querySelectorAll(triggerSelector),
+                    popup = document.querySelector(popupSelector),
+                    close = document.querySelector(closeSelector);
 
-                buttonTrigger.addEventListener('click', () => {
-                    popup.classList.add('popup_catalog--open');
+                trigger.forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        if (e.target) {
+                            e.preventDefault();
+                        }
+
+                        popup.classList.add('popup_catalog--open');
+                        //document.body.style.overflow = "hidden";
+                    });
                 });
-                popupClose.addEventListener('click', () => {
+
+                close.addEventListener('click', () => {
                     popup.classList.remove('popup_catalog--open');
+                    //document.body.style.overflow = "";
+                });
+
+                popup.addEventListener('click', (e) => {
+                    if (e.target === popup) {
+                        popup.classList.remove('popup_catalog--open');
+                        //document.body.style.overflow = "";
+                    }
                 });
             }
 
